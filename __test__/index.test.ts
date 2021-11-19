@@ -376,33 +376,6 @@ const executeAllTests = function (Country: any, State: any) {
 		expect(states.length).toEqual(0);
 	});
 
-	test('Check Cities for Delhi', () => {
-		const countryCode = 'IN';
-		const stateCode = 'DL';
-		expect(names).toEqual([
-			'Alipur',
-			'Bawana',
-			'Central Delhi',
-			'Delhi',
-			'Deoli',
-			'East Delhi',
-			'Karol Bagh',
-			'Najafgarh',
-			'Nangloi Jat',
-			'Narela',
-			'New Delhi',
-			'North Delhi',
-			'North East Delhi',
-			'North West Delhi',
-			'Pitampura',
-			'Rohini',
-			'South Delhi',
-			'South West Delhi',
-			'West Delhi',
-		]);
-	});
-
-
 	test('Get State by State ISOCode and Country Code', () => {
 		const countryCode = 'PK';
 		const stateCode = 'KP';
