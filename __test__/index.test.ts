@@ -1,8 +1,8 @@
 /* eslint-disable no-shadow */
-import { Country, State, City } from '../index';
-import { ICountry, ICity, IState } from '../lib/interface';
+import { Country, State,  } from '../index';
+import { ICountry,  IState } from '../lib/interface';
 
-const executeAllTests = function (Country: any, State: any, City: any) {
+const executeAllTests = function (Country: any, State: any) {
 	test('Check for Country By Code ', () => {
 		const code = 'CA';
 		const country: ICountry = Country.getCountryByCode(code);
@@ -379,10 +379,6 @@ const executeAllTests = function (Country: any, State: any, City: any) {
 	test('Check Cities for Delhi', () => {
 		const countryCode = 'IN';
 		const stateCode = 'DL';
-		const cities: any = City.getCitiesOfState(countryCode, stateCode);
-		const names = cities.map((city: ICity) => {
-			return city.name;
-		});
 		expect(names).toEqual([
 			'Alipur',
 			'Bawana',
@@ -406,20 +402,6 @@ const executeAllTests = function (Country: any, State: any, City: any) {
 		]);
 	});
 
-	test('Check Cities for undefined State', () => {
-		let countryCode;
-		const stateCode = 'DL';
-		const cities: any = City.getCitiesOfState(countryCode, stateCode);
-
-		expect(cities.length).toEqual(0);
-	});
-
-	test('Check Cities for undefined State', () => {
-		const countryCode = 'IN';
-		let stateCode;
-		const cities: any = City.getCitiesOfState(countryCode, stateCode);
-		expect(cities.length).toEqual(0);
-	});
 
 	test('Get State by State ISOCode and Country Code', () => {
 		const countryCode = 'PK';
@@ -444,4 +426,4 @@ const executeAllTests = function (Country: any, State: any, City: any) {
 
 };
 export default executeAllTests;
-executeAllTests(Country, State, City);
+executeAllTests(Country, State);

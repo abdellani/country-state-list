@@ -1,3 +1,9 @@
+# Important Note
+This is a copy of the work: https://github.com/harpreetkhalsagtbit/country-state-city
+I just removed the part related to cities. This part was making my project, that depends on the original work,  very slow to load into the browser.
+
+
+# The original README
 country-state-city
 ==============================
 Basic library for Country, State and City
